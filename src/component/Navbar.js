@@ -1,8 +1,9 @@
 import React from 'react'
-import {Typography,Avatar} from  'antd';
+import {Typography,Avatar,Menu} from  'antd';
 import {Link} from 'react-router-dom';
-//import {HomeOutlined,MoneyCollectionOutlined,BuldOutlined,FundOutlined,MenuOutlined} from '@ant-design/icons'
+import {HomeOutlined,MoneyCollectOutlined,BulbOutlined,FundOutlined,MenuOutlined} from '@ant-design/icons'
 import icon from "../images/cryptocurrency.png";
+
 
 const Navbar = () => {
   return (
@@ -12,10 +13,31 @@ const Navbar = () => {
         <Typography.Title level={2} className="Logo">
             <Link to ="/">Cryptovers</Link>
         </Typography.Title>
-        { /* <Button className="menu-control-container"></Button> */}
+        </div>
+        <Menu theme="dark">
+
+        <Menu.Item key="3" icon={<HomeOutlined/>}>
+            <Link to="/">Home</Link>
+          </Menu.Item>
+
+
+          <Menu.Item key="3" icon={<FundOutlined/>}>
+            <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+          </Menu.Item>
+
+          <Menu.Item key="3" icon={<MoneyCollectOutlined/>}>
+            <Link to="/exchanges">Exchanges</Link>
+          </Menu.Item>
+
+          <Menu.Item key="3" icon={<BulbOutlined/>}>
+            <Link to="/news">News</Link>
+          </Menu.Item>
+
+
+        </Menu>
         
         </div>
-    </div>
+    
   )
 }
 
